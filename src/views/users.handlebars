@@ -1,0 +1,33 @@
+<div>
+
+    <table id="productsTable" class="table-cart">
+        <thead>
+            <tr>
+                <th><strong>name</strong></th>
+                <th><strong>email</strong></th>
+                <th><strong>role</strong></th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {{#each data}}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{email}}</td>
+                <td>{{role}}</td>
+                <th>
+                    <form action="/api/users/change/{{id}}" method="post">
+                        <button class="botons" type="submit">change role</button>
+                    </form>
+                </th>
+                <td>
+                    <form class="send-cart" action="/api/users/delete/{{id}}" method="post">
+                        <input class="botons" type="submit" name="delete" value="delete">
+                    </form>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+<link rel="stylesheet" href="/css/{{style}}">

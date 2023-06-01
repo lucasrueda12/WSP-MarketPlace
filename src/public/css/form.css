@@ -1,0 +1,94 @@
+
+.addel-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addel-container div{
+    position: relative;
+    width: auto;
+}
+
+.addel-container div h1{
+    border-radius: 7.5px;
+    padding: 10px;
+    border-top-right-radius: 0;
+}
+
+._1kh65{
+    position: absolute;
+    top: -2px;
+    right: -8px;
+    z-index: 100;
+    display: block;
+    width: 8px;
+    height: 13px;
+    color: #005c4b;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px 0 30px;
+}
+.addel{
+    width: 400px;
+    background-color: #2a3942;
+    padding: 30px;
+    border-radius: 4px;
+    margin: auto;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 7px 13px 37px #000;
+}
+.addel h4{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.controls{
+    width: 100%;
+    background: #009879;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid white;
+    color: white;
+}
+::placeholder{
+    color: white;
+    border: none;;
+}
+.addel p{
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+}
+.addel a{
+    color: white;
+    text-decoration: none;
+}
+.addel a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.botons{
+    width: 100%;
+    background: #009879;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+.send-cart input{
+    border-radius: 4px;
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}

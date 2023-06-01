@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    text-decoration: none;
+    width: 100%;
+}
+
+header nav{
+    display: flex;
+    justify-content: end;
+    margin: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+header nav ul{
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 14.2px;
+    line-height: 19px;
+    background-color: #005c4b;
+    border-radius: 7.5px;
+    position: relative;
+    z-index: 200;
+    border-top-right-radius: 0;
+    padding: 8px;
+}
+
+
+header nav ul li{
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+header nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.user-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 36px;
+}
+.user{
+    padding: 4px;
+    margin-right: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #005c4b;
+}
+
+.arrowmsg{
+    position: absolute;
+    top: -2px;
+    right: -8px;
+    z-index: 100;
+    display: block;
+    width: 8px;
+    height: 13px;
+    color: #005c4b;
+}
