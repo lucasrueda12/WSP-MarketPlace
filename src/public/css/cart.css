@@ -25,4 +25,17 @@ h1 {
     padding: 0 30px 0 30px;
 }
 
+.send-cart{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
 
+.botons{
+    background: #009879;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}

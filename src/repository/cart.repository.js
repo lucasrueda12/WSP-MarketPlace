@@ -35,7 +35,7 @@ export default class CartRepository {
     addProduct = async (id, pid, quantity, user)=>{
         try {
             const prod = await ProductService.getOne(pid);
-            if(prod.owner.id == user._id) return -1;
+            if(prod.owner?.id == user._id) return -1;
             const cart = await this.getOne(id);
             const idx = cart.products.findIndex(prod => prod.id == pid);
             if (idx != -1) {
@@ -44,7 +44,7 @@ export default class CartRepository {
                 return await this.dao.addProduct(id,pid, quantity);
             }
         } catch (error) {
-            console.log('Error to add product service' + error);
+            console.log('Error to add product service: ' + error);
         }
     }
 

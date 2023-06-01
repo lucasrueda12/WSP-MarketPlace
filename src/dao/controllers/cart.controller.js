@@ -76,7 +76,6 @@ export const addProduct = async (req, res) =>{
         const quantity = req.body?.quantity || 1;
         const user = req.user.user;
         const result = await CartService.addProduct(cid, pid, quantity, user);
-    
         if(!result){
             req.logger.error(
                 CustomError.createError({
