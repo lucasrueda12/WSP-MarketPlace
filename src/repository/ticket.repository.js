@@ -22,6 +22,14 @@ export default class TicketRepository {
         }
     }
 
+    getByEmail = async(purchaser)=>{
+        try {
+            return await this.dao.getByEmail(purchaser);
+        } catch (error) {
+            console.log('ticket not found');
+        }
+    }
+
     create = async (email, amount)=>{
         try {            
             const ticketToInsert = new TicketDTO({email: email,

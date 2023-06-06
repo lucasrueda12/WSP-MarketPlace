@@ -1,0 +1,23 @@
+<h1>Tickets</h1>
+<div class="row gap-3 text-center">
+    {{#each tickets}}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <strong class="card-title">Codigo: </strong> {{code}} <br>
+            <strong>Precio total: </strong> ${{amount}} <br>
+            <strong>Email del Comprador: </strong>{{purchaser}} <br>
+        </div>
+        <div>
+            <form action="/api/carts/pagar" class="gap-3" method="post">
+                <input type="hidden" name="total" value="{{amount}}">
+                <input type="hidden" name="id" value="{{_id}}">
+                <input type="submit" value="Pagar Con MercadoPago" class="btn btn-success"></input>
+            </form>
+        </div>
+    </div>
+    {{/each}}
+</div>
+<br>
+<a href="/products"><button class="botoncito btn btn-danger ">Volver al Inicio</button></a>
+
+<link rel="stylesheet" href="/css/{{style}}">

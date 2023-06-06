@@ -21,6 +21,15 @@ export default class Ticket {
         }
     }
 
+    getByEmail = async(purchaser) =>{
+        try {
+            const ticket = await ticketModel.find({purchaser}).lean().exec();
+            return ticket;
+        } catch (error) {
+            console.log('Error to have user: User not found');
+        }
+    }
+
     create = async(ticket)=>{
         try {
             const result = await ticketModel.create(ticket);

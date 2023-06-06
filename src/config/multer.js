@@ -23,19 +23,19 @@ const storage = multer.diskStorage({
                 const docName = `${uid}-${file.originalname}`;
                 const path = `files/documents/${docName}`
                 await UserService.addDocs(uid, 'identificacion', path);
-                cb(null, docName);
+                return cb(null, docName);
             }
             if (file.originalname.includes('comprobante de domicilio')) {
                 const docName = `${uid}-${file.originalname}`;
                 const path = `files/documents/${docName}`
                 await UserService.addDocs(uid, 'comprobante de domicilio', path);
-                cb(null, docName);
+                return cb(null, docName);
             }
             if (file.originalname.includes('comprobante de estado de cuenta')) {
                 const docName = `${uid}-${file.originalname}`;
                 const path = `files/documents/${docName}`
                 await UserService.addDocs(uid, 'comprobante de estado de cuenta', path);
-                cb(null, docName);
+                return cb(null, docName);
             }
         }
         cb(null, `${Date.now()}-${uid}-${file.originalname}`);
@@ -62,4 +62,4 @@ function fileFilter(req, file, cb){
 
 const upl = multer({ storage: storage, fileFilter });
 
-export const upload = upl.single('myFile');
+export const upload = upl.any('myFile');

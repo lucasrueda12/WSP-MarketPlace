@@ -1,0 +1,40 @@
+@import url('./header.css');
+
+.ticket-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botoncito{
+    background-color: #009879;
+}
+
+.ticket-container h1{
+    font-size: 200%;
+    text-align: center;
+    width: 20%;
+    height: 50px;
+    background-color: #2a3942;
+    color: #009879;
+    border-radius: 5px;
+}
+
+.list-tickets{
+    width: 100%;
+    display: flex;
+    list-style: none;
+}
+
+.info-ticket{
+    list-style: none;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: #2a3942;
+    color: #009879;
+    border-radius: 5px;
+}

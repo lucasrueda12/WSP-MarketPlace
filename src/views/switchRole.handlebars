@@ -1,8 +1,29 @@
-<div>
-    {log id}
-    <form action="/api/users/premium/{{id}}" method="post">
-        <input class="botons" type="submit" value="changeRole">
-    </form>
+<div class="container">
+
+    {{#if roleUser}}
+    <div class="form-container">
+        <form action="/api/users/{{id}}/documents" method="post" enctype="multipart/form-data">
+            <h1>Upload Documents</h1>
+            {{#if noHasDocumentation}}
+            <div class="hasDocs">
+                <p>
+                    Para convertirte en admin debes subir la siguiente documentacion en pdf:
+                    identificacion, comprobante de domicilio, comprobante de estado de cuenta
+                </p>
+            </div>
+            {{/if}}
+            <input class="botons" type="file" name="MyFile" multiple></input>
+            <button class="botons" type="submit">
+                Save
+            </button>
+        </form>
+    </div>
+    {{/if}}
+    <div class="change">
+        <form action="/api/users/premium/{{id}}" method="post">
+            <input class="botons" type="submit" value="changeRole">
+        </form>
+    </div>
 </div>
 
 <link rel="stylesheet" href="/css/switchRole.css">

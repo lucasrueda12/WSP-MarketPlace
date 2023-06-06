@@ -51,6 +51,10 @@ app.engine('handlebars', handlebars.engine());
 app.set('views', __dirname + '/views');
 // terminamos de definir la vista
 app.set('view engine', 'handlebars');
+const { handlebars: hbs } = handlebars.create();
+hbs.registerHelper('eq', function (a, b) {
+    return a == b;
+});
 
 // especificamos la carpeta public para la pagina
 app.use(express.static(__dirname + '/public'));

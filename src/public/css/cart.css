@@ -28,7 +28,7 @@ h1 {
 .send-cart{
     width: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: center;
 }
 
 .botons{
