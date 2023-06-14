@@ -144,7 +144,7 @@ router.post('/sendrestore', async (req, res) => {
                             </tr>
                             <tr>
                                 <td style="padding:16px 24px 0 24px">
-                                    <a style="border:1px solid #cccccc;display:inline-block" href="http://127.0.0.1:8080/session/restore/${jwt}" target="_blank">
+                                    <a style="border:1px solid #cccccc;display:inline-block" href="${config.base_url}/session/restore/${jwt}" target="_blank">
                                         <span
                                             style="background:#009879;color:#fff;display:inline-block;min-width:80px;border-top:14px solid #009879;border-bottom:14px solid #009879;border-left:12px solid #009879;border-right:12px solid #009879;text-align:center;text-decoration:none;white-space:nowrap;font-family:'SF Pro Display',-apple-system,BlinkMacSystemFont,Roboto,'Segoe UI',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-size:16px;font-weight:700;line-height:1.2;letter-spacing:-0.2px">
                                             Change your password
